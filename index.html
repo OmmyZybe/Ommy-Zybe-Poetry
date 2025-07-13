@@ -18,16 +18,6 @@
       padding: 60px 20px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      letter-spacing: 2px;
-    }
-    header p {
-      font-style: italic;
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
     nav {
       background-color: #333;
       display: flex;
@@ -37,26 +27,27 @@
       color: #fff;
       padding: 15px 20px;
       text-decoration: none;
-      transition: background 0.3s;
-    }
-    nav a:hover {
-      background-color: #555;
     }
     section {
       padding: 40px 20px;
       max-width: 800px;
       margin: auto;
     }
-    h2 {
+    .youtube {
       text-align: center;
-      margin-bottom: 30px;
+      margin-top: 40px;
     }
-    .poem {
-      margin-bottom: 30px;
+    .youtube a {
+      display: inline-block;
+      text-decoration: none;
+      color: #c4302b;
+      font-weight: bold;
+      font-size: 1.2em;
     }
-    .poem h3 {
-      margin-bottom: 10px;
-      font-style: italic;
+    .youtube img {
+      width: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
     }
     form input, form textarea {
       width: 100%;
@@ -74,25 +65,6 @@
       padding: 10px 20px;
       cursor: pointer;
       border-radius: 5px;
-    }
-    form button:hover {
-      background-color: #333;
-    }
-    .youtube {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .youtube a {
-      display: inline-block;
-      text-decoration: none;
-      color: #c4302b;
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-    .youtube img {
-      width: 40px;
-      vertical-align: middle;
-      margin-right: 10px;
     }
     footer {
       background-color: #f2f2f2;
@@ -120,42 +92,30 @@
     <h2>Featured Poems</h2>
     <div class="poem">
       <h3>Whispers of the Wind</h3>
-      <p>
-        The wind carries whispers I can barely hear,<br>
-        Echoes of silence drawing me near,<br>
-        In each breeze a secret, soft and thin,<br>
-        A message from the world within.
-      </p>
+      <p>The wind carries whispers I can barely hear,<br>Echoes of silence drawing me near,<br>In each breeze a secret, soft and thin,<br>A message from the world within.</p>
     </div>
     <div class="poem">
       <h3>Midnight Ink</h3>
-      <p>
-        Under stars, my pen bleeds thought,<br>
-        Lines of love and battles fought,<br>
-        Pages cry with every stroke,<br>
-        Midnight ink, the voice I spoke.
-      </p>
+      <p>Under stars, my pen bleeds thought,<br>Lines of love and battles fought,<br>Pages cry with every stroke,<br>Midnight ink, the voice I spoke.</p>
     </div>
   </section>
 
   <section id="about">
     <h2>About Ommy Zybe</h2>
-    <p>
-      I am Ommy Zybe, a poet driven by rhythm, emotion, and experience. Through my words, I explore love, identity, struggle, and the quiet moments that define us. Poetry is not just art—it's how I breathe. I write to connect, to reflect, and to uplift souls through language.
-    </p>
+    <p>I am Ommy Zybe, a poet driven by rhythm, emotion, and experience. Through my words, I explore love, identity, struggle, and the quiet moments that define us.</p>
   </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <form>
+    <form action="https://formspree.io/f/xwpqeoly" method="POST">
       <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" required />
+      <input type="text" name="name" required>
 
       <label for="email">Your Email</label>
-      <input type="email" id="email" placeholder="Enter your email" required />
+      <input type="email" name="email" required>
 
       <label for="message">Message</label>
-      <textarea id="message" rows="5" placeholder="Write your message..."></textarea>
+      <textarea name="message" rows="5" required></textarea>
 
       <button type="submit">Send Message</button>
     </form>
